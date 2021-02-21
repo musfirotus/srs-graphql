@@ -1,0 +1,76 @@
+# Request
+query mySession {
+  mySession {
+    id,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    userId,
+    user {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      group {
+        id,
+        createdBy,
+        createdAt,
+        updatedBy,
+        updatedAt,
+        deletedAt,
+        kodeGroup,
+        unit {
+          id,
+          createdBy,
+          updatedBy,
+          createdAt,
+          updatedAt,
+          deletedAt,
+          kodeUnit,
+          name
+        },
+        level {
+          id,
+          createdBy,
+          updatedBy,
+          createdAt,
+          updatedAt,
+          deletedAt,
+          name
+        },
+        unitId,
+        namaGroup,
+        idLevel,
+        deskripsi
+      },
+      idGroup,
+      email,
+      kodeUpbjj,
+      name,
+      ecampusAccount
+    },
+    ip,
+    country,
+    city,
+    timezone,
+    latitude,
+    longitude,
+    browser,
+    browserVersion,
+    os,
+    osVersion,
+    device,
+    deviceBrand,
+    deviceModel,
+    expiredAt,
+    isFirstLogin,
+    isDefaultPassword
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

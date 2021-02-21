@@ -1,0 +1,9 @@
+# Request
+mutation updateSession {
+  updateSession
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

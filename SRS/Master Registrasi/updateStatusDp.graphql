@@ -1,0 +1,31 @@
+# Request
+mutation updateStatusDp($id: Int!, $dp: StatusDpPayload!) {
+  updateStatusDp(payload: $dp, id: $id) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    keterangan,
+    statusAktif {
+      id
+    },
+    kodeStatusDp,
+    statusAktifId
+  }
+}
+
+# Variables
+{
+  "id": 23,
+  "dp": {
+    "kodeStatusDp": "DI",
+    "keterangan": "Tes Lah"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

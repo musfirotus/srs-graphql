@@ -1,0 +1,9 @@
+# Request
+mutation logoutUser {
+  logoutUser
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

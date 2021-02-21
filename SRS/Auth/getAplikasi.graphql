@@ -1,0 +1,21 @@
+# Request
+query getAplikasi {
+  getAplikasi {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeAplikasi,
+    nama,
+    nama_singkat,
+    icon,
+    color
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

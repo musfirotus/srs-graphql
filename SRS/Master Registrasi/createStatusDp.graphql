@@ -1,0 +1,21 @@
+# Request
+mutation createStatusDp($payload: StatusDpPayload!) {
+  createStatusDp(payload: $payload) {
+    id,
+    keterangan,
+    kodeStatusDp
+  }
+}
+
+# Variables
+{
+  "payload": {
+    "keterangan": "Test tes 1",
+    "kodeStatusDp": "DF"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

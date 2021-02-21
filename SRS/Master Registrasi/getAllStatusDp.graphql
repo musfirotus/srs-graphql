@@ -1,0 +1,28 @@
+# Request
+query {
+  getAllStatusDp(skip:3) {
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan,
+      statusAktif {
+        id,
+        keterangan
+      },
+      kodeStatusDp,
+      statusAktifId
+    }
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

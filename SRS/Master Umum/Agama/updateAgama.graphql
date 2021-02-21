@@ -1,0 +1,29 @@
+# Request
+mutation updateAgama($id: Int!, $payload: AgamaPayload!) {
+  updateAgama(id: $id, payload: $payload) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    namaAgama,
+    kodeAgama,
+    statusAktif
+  }
+}
+
+# Variables
+{
+  "id": 72,
+  "payload": {
+    "namaAgama": "Test test",
+    "kodeAgama": "w",
+    "statusAktif": 1
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

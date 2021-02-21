@@ -1,0 +1,12 @@
+# Request
+mutation loginUser ($user: LoginPayload!) {
+    loginUser (user: $user)
+}
+
+# Variables
+{
+  "user": {
+    "email": "dicky.fahlevi@ecampus.ut.ac.id",
+    "password": "1234567"
+  }
+}

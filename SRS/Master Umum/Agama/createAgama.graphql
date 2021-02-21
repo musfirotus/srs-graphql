@@ -1,4 +1,26 @@
+# Request
+mutation createAgama($agama: AgamaPayload!) {
+  createAgama(payload: $agama){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    namaAgama,
+    kodeAgama,
+    statusAktif
+  }
+}
 
+# Variables
+{
+  "agama": {
+    "namaAgama": "Tes tes",
+    "kodeAgama": "a",
+    "statusAktif": 1
+  }
+}
 
 # Headers
 {

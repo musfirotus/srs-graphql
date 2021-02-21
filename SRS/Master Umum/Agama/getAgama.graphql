@@ -1,4 +1,22 @@
+# Request
+query getAgama($id: Int!) {
+  getAgama(id: $id) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    namaAgama,
+    kodeAgama,
+    statusAktif
+  }
+}
 
+# Variables
+{
+  "id": 54
+}
 
 # Headers
 {

@@ -1,0 +1,14 @@
+# Request
+mutation softDeletePos($id: Int!) {
+  softDeletePos(id: $id)
+}
+
+# Variables
+{
+  "id": 18474
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

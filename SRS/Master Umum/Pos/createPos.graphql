@@ -1,0 +1,58 @@
+# Request
+mutation createPos($payload: PosPayload!){
+  createPos(payload: $payload) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodePos,
+    namaPos,
+    idKabko,
+    kabko {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeKabko,
+      idProvinsi,
+      namaKabko,
+      kodeKabkoKemendagri,
+      statusAktif,
+      statusTpu,
+    },
+    nomorTeleponPos,
+    namaKecamatan,
+    kprk,
+    idUpbjj,
+    statusAktif,
+    statusAktifData {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "payload": {
+    "kodePos": "23713",
+    "idKabko": 1,
+    "namaPos": "",
+    "idUpbjj": 99,
+    "statusAktif": 5
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

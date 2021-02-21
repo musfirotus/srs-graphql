@@ -1,0 +1,63 @@
+# Request
+query searchPos($orderBy: PosFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int, $payload: PosArgs!) {
+  searchPos(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip, payload: $payload) {
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodePos,
+      namaPos,
+      idKabko,
+      kabko {
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        kodeKabko,
+        idProvinsi,
+        namaKabko,
+        kodeKabkoKemendagri,
+        statusAktif,
+        statusTpu
+      },
+      nomorTeleponPos,
+      namaKecamatan,
+      kprk,
+      idUpbjj,
+      statusAktif,
+      statusAktifData {
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodePos",
+  "sort": "ASC",
+  "limit": 50,
+  "skip": 0,
+  "payload": {
+    "namaPos": "bert"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

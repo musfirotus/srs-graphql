@@ -1,0 +1,14 @@
+# Request
+mutation softDeleteStatusAktif($id: Int!) {
+  softDeleteStatusAktif(id: $id)
+}
+
+# Variables
+{
+  "id": 4
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

@@ -1,0 +1,24 @@
+# Request
+mutation createStatusAktif($payload: StatusAktifPayload!) {
+  createStatusAktif(payload: $payload) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    keterangan,
+  }
+}
+
+# Variables
+{
+  "payload": {
+    "keterangan": "Aktif Tes"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

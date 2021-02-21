@@ -1,0 +1,30 @@
+#Request
+query getAllStatusAktif($orderBy: StatusAktifFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int) {
+  getAllStatusAktif(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip) {
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedBy,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "keterangan",
+  "sort": "ASC",
+  "limit": 2,
+  "skip": 0
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

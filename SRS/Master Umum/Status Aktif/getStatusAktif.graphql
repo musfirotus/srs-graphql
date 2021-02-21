@@ -1,0 +1,22 @@
+# Request
+query getStatusAktif($id: Int!) {
+  getStatusAktif(id: $id){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    keterangan,
+  }
+}
+
+# Variables
+{
+  "id": 3
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

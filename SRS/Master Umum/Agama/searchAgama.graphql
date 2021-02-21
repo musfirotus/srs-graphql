@@ -1,0 +1,36 @@
+# Request
+# Request
+query searchAgama($orderBy: AgamaFieldsEnum, $sort: SortByEnum, $limit: Int!, $skip: Int!, $payload: AgamaArgs!) {
+  searchAgama(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip, payload: $payload) {
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      namaAgama,
+      kodeAgama,
+      statusAktif
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodeAgama",
+  "sort": "ASC",
+  "limit": 0,
+  "skip": 0,
+  "payload": {
+    "namaAgama": "tes"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

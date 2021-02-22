@@ -1,0 +1,48 @@
+# Request
+mutation updateProvinsi($id: Int!, $payload: ProvinsiPayload!){
+  updateProvinsi(payload: $payload, id: $id){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeProvinsi,
+    idPulau,
+    pulau {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodePulau,
+      namaPulau,
+      statusAktif,
+      statusAktifData{
+        id,
+        keterangan
+      }
+    },
+    namaProvinsi,
+    idProvinsiKemendagri,
+    statusAktif
+  }
+}
+
+# Variables
+{
+  "id": 40,
+  "payload": {
+    "kodeProvinsi": "48",
+    "idPulau": 9,
+    "idProvinsiKemendagri": 34,
+    "namaProvinsi": "Testing Yak",
+    "statusAktif": 5
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

@@ -1,0 +1,47 @@
+# Request
+mutation createProvinsi($payload: ProvinsiPayload!){
+  createProvinsi(payload: $payload){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeProvinsi,
+    idPulau,
+    pulau {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodePulau,
+      namaPulau,
+      statusAktif,
+      statusAktifData{
+        id,
+        keterangan
+      }
+    },
+    namaProvinsi,
+    idProvinsiKemendagri,
+    statusAktif
+  }
+}
+
+# Variables
+{
+  "payload": {
+    "kodeProvinsi": "az",
+    "idPulau": 1,
+    "idProvinsiKemendagri": 0,
+    "namaProvinsi": "Testing2",
+    "statusAktif": 1
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

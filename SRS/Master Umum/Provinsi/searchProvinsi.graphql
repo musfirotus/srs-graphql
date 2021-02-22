@@ -1,0 +1,52 @@
+# Request
+query searchProvinsi($payload: ProvinsiArgs!, $orderBy: ProvinsiFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int){
+  searchProvinsi(payload: $payload, orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip){
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeProvinsi,
+      idPulau,
+      pulau {
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        kodePulau,
+        namaPulau,
+        statusAktif,
+        statusAktifData{
+          id,
+          keterangan
+        }
+      },
+      namaProvinsi,
+      idProvinsiKemendagri,
+      statusAktif
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodeProvinsi",
+  "sort": "ASC",
+  "limit": 0,
+  "skip": 0,
+  "payload": {
+    "namaProvinsi": "tes"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

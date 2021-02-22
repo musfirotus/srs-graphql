@@ -1,0 +1,14 @@
+# Request
+mutation softDeleteProvinsi($id: Int!){
+  softDeleteProvinsi(id: $id)
+}
+
+# Variables
+{
+  "id": 41
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

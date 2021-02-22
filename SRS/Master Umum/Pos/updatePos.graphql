@@ -49,7 +49,8 @@ mutation updatePos($payload: PosPayload!, $id: Int!){
     "namaPos": "",
     "idUpbjj": 99,
     "statusAktif": 5
-  }
+  },
+  "id": 
 }
 
 # Headers

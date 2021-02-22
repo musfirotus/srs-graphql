@@ -1,0 +1,30 @@
+# Request
+query getAllStatusAktifBeasiswa($orderBy: StatusAktifBeasiswaFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int) {
+  getAllStatusAktifBeasiswa(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip) {
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedBy,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "keterangan",
+  "sort": "DESC",
+  "limit": 0,
+  "skip": 0
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

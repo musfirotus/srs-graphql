@@ -1,0 +1,22 @@
+# Request
+query getStatusAktifBeasiswa($id: Int!) {
+  getStatusAktifBeasiswa(id: $id) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedBy,
+    deletedAt,
+    keterangan
+  }
+}
+
+# Variables
+{
+  "id": 6
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

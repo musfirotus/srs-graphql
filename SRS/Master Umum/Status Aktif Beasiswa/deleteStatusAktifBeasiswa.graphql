@@ -1,0 +1,14 @@
+# Request
+mutation softDeleteStatusAktifBeasiswa($id: Int!) {
+  softDeleteStatusAktifBeasiswa(id: $id)
+}
+
+# Variables
+{
+  "id": 4
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

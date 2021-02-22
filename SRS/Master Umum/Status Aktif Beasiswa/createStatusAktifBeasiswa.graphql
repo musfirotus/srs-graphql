@@ -1,0 +1,24 @@
+# Request
+mutation createStatusAktifBeasiswa($payload: StatusAktifBeasiswaPayload!) {
+  createStatusAktifBeasiswa(payload: $payload) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    keterangan,
+  }
+}
+
+# Variables
+{
+  "payload": {
+    "keterangan": "Tes"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

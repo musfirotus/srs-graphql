@@ -1,0 +1,32 @@
+# Request
+query searchStatusTpu($orderBy: StatusTpuFieldsEnum, $sort: SortByEnum, $limit: Int!, $skip: Int!, $payload: MasterArgs!) {
+  searchStatusTpu(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip, payload: $payload) {
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "keterangan",
+  "limit": 0,
+  "skip": 0,
+  "payload": {
+    "keterangan": "di"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

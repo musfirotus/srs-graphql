@@ -1,0 +1,14 @@
+# Request
+mutation softDeleteStatusTpu($id: Int!) {
+  softDeleteStatusTpu(id: $id)
+}
+
+# Variables
+{
+  "id": 3
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

@@ -1,0 +1,22 @@
+# Request
+query getStatusTpu($id: Int!) {
+  getStatusTpu(id: $id) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedBy,
+    deletedAt,
+    keterangan
+  }
+}
+
+# Variables
+{
+  "id": 0
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

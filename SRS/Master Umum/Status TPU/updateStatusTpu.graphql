@@ -1,0 +1,25 @@
+# Request
+mutation updateStatusTpu($id: Int!, $payload: StatusTpuPayload!) {
+  updateStatusTpu(id: $id, payload: $payload) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    keterangan
+  }
+}
+
+# Variables
+{
+  "id": 3,
+  "payload": {
+    "keterangan": "Tes TPU lagi"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

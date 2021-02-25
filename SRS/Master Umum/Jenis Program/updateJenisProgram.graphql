@@ -1,0 +1,39 @@
+# Request
+mutation updateJenisProgram($id: Int!, $payload: JenisProgramPayload!) {
+  updateJenisProgram(id: $id, payload: $payload) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeJenisProgram,
+    keterangan,
+    nimAwalan,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedBy,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 7,
+  "payload": {
+    "kodeJenisProgram": "a",
+    "keterangan": "Tes Ketarangan",
+    "nimAwalan": "8",
+    "statusAktif": 1
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

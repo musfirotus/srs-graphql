@@ -1,0 +1,33 @@
+# Request
+query getJenisProgram($id: Int!) {
+  getJenisProgram(id: $id) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedBy,
+    deletedAt,
+    kodeJenisProgram,
+    keterangan,
+    nimAwalan,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedBy,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 14
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

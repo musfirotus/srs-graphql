@@ -1,0 +1,14 @@
+# Request
+mutation softDeleteJenisProgram($id: Int!) {
+  softDeleteJenisProgram(id: $id)
+}
+
+# Variables
+{
+  "id": 56
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

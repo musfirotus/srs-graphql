@@ -1,0 +1,14 @@
+# Request
+mutation softDeleteZonaWaktu($id: Int!) {
+  softDeleteZonaWaktu(id: $id)
+}
+
+# Variables
+{
+  "id": 6
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

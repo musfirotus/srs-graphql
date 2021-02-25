@@ -1,0 +1,42 @@
+# Request
+query searchZonaWaktu($orderBy: ZonaWaktuFieldsEnum, $sort: SortByEnum, $limit: Int!, $skip: Int!, $payload: ZonaWaktuArgs!) {
+  searchZonaWaktu(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip, payload: $payload) {
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      namaZonaWaktu,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedBy,
+        deletedAt,
+        keterangan
+      }
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "namaZonaWaktu",
+  "limit": 0,
+  "skip": 0,
+  "payload": {
+    "namaZonaWaktu": "wi"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

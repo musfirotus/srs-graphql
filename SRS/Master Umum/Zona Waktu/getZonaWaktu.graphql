@@ -1,0 +1,32 @@
+# Request
+query getZonaWaktu($id: Int!) {
+  getZonaWaktu(id: $id) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedBy,
+    deletedAt,
+    namaZonaWaktu,
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedBy,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 6
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

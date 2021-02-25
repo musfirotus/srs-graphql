@@ -1,0 +1,36 @@
+# Request
+mutation updateZonaWaktu($id: Int!, $payload: ZonaWaktuPayload!) {
+  updateZonaWaktu(id: $id, payload: $payload) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    namaZonaWaktu,
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedBy,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 6,
+  "payload": {
+    "namaZonaWaktu": "ZonaTes",
+    "statusAktif": 1
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

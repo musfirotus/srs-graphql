@@ -1,0 +1,61 @@
+# Request
+mutation updateBeasiswa($id: Int!, $payload: BeasiswaPayload!){
+  updateBeasiswa(payload: $payload, id: $id){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeBeasiswa,
+    keteranganBeasiswa,
+    idJenisProgram,
+    jenisProgram {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeJenisProgram,
+      keterangan,
+      nimAwalan,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    },
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 139,
+  "payload": {
+    "kodeBeasiswa": "ew",
+    "keteranganBeasiswa": "BEASISWA Tes",
+    "idJenisProgram": 1,
+    "statusAktif": 1
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

@@ -1,0 +1,55 @@
+# Request
+query getBeasiswa($id: Int!){
+  getBeasiswa(id: $id){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeBeasiswa,
+    keteranganBeasiswa,
+    idJenisProgram,
+    jenisProgram {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeJenisProgram,
+      keterangan,
+      nimAwalan,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    },
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 155
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

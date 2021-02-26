@@ -1,0 +1,60 @@
+# Request
+mutation createBeasiswa($payload: BeasiswaPayload!){
+  createBeasiswa(payload: $payload){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeBeasiswa,
+    keteranganBeasiswa,
+    idJenisProgram,
+    jenisProgram {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeJenisProgram,
+      keterangan,
+      nimAwalan,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    },
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "payload": {
+    "kodeBeasiswa": "ax",
+    "keteranganBeasiswa": "Tes",
+    "idJenisProgram": 2,
+    "statusAktif": 1
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

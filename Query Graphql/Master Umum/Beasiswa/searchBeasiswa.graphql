@@ -1,0 +1,66 @@
+# Request
+query searchBeasiswa($payload: BeasiswaArgs!, $orderBy: BeasiswaFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int){
+  searchBeasiswa(payload: $payload, orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip){
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeBeasiswa,
+      keteranganBeasiswa,
+      idJenisProgram,
+      jenisProgram {
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        kodeJenisProgram,
+        keterangan,
+        nimAwalan,
+        statusAktif,
+        statusAktifData{
+          id,
+          createdBy,
+          updatedBy,
+          createdAt,
+          updatedAt,
+          deletedAt,
+          keterangan
+        }
+      },
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodeBeasiswa",
+  "sort": "DESC",
+  "limit": 0,
+  "skip": 0,
+  "payload": {
+    "keteranganBeasiswa": "tes"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

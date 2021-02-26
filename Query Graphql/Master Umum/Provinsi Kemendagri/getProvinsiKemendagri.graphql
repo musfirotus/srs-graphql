@@ -1,0 +1,33 @@
+# Request
+query getProvinsiKemendagri($id: Int!){
+  getProvinsiKemendagri(id: $id){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeProvinsiKemendagri,
+    namaProvinsi,
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 11
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

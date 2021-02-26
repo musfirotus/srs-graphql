@@ -1,0 +1,44 @@
+# Request
+query searchProvinsiKemendagri($payload: ProvinsiKemendagriArgs!, $orderBy: ProvinsiKemendagriFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int){
+  searchProvinsiKemendagri(payload: $payload, orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip){
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeProvinsiKemendagri,
+      namaProvinsi,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodeProvinsiKemendagri",
+  "sort": "DESC",
+  "limit": 0,
+  "skip": 0,
+  "payload": {
+    "namaProvinsi": "testni"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

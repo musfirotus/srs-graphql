@@ -1,0 +1,73 @@
+# Request
+query getAllKabko($orderBy: KabkoFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int){
+  getAllKabko(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip){
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      idProvinsi,
+      provinsi{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        kodeProvinsi,
+        namaProvinsi,
+        statusAktif,
+        statusAktifData{
+          id,
+          createdBy,
+          updatedBy,
+          createdAt,
+          updatedAt,
+          deletedAt,
+          keterangan
+        }
+      },
+      kodeKabko,
+      namaKabko,
+      kodeKabkoKemendagri,
+      statusAktif,
+      statusAktifData {
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      },
+      statusTpu,
+      statusTpuData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodeKabko",
+  "sort": "ASC",
+  "limit": 10,
+  "skip": 2
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

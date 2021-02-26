@@ -1,0 +1,65 @@
+# Request
+query getKabko($id: Int!) {
+  getKabko(id: $id) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    idProvinsi,
+    provinsi{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeProvinsi,
+      namaProvinsi,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    },
+    kodeKabko,
+    namaKabko,
+    kodeKabkoKemendagri,
+    statusAktif,
+    statusAktifData {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    },
+    statusTpu,
+    statusTpuData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 14
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

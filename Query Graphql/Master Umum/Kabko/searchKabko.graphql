@@ -1,0 +1,75 @@
+# Request
+query searchKabko($orderBy: KabkoFieldsEnum, $sort: SortByEnum, $limit: Int!, $skip: Int!, $payload: KabkoArgs!) {
+  searchKabko(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip, payload: $payload) {
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      idProvinsi,
+      provinsi{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        kodeProvinsi,
+        namaProvinsi,
+        statusAktif,
+        statusAktifData{
+          id,
+          createdBy,
+          updatedBy,
+          createdAt,
+          updatedAt,
+          deletedAt,
+          keterangan
+        }
+      },
+      kodeKabko,
+      namaKabko,
+      kodeKabkoKemendagri,
+      statusAktif,
+      statusAktifData {
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      },
+      statusTpu,
+      statusTpuData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodeKabko",
+  "limit": 0,
+  "skip": 0,
+  "payload": {
+    "namaKabko": "tes ni"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

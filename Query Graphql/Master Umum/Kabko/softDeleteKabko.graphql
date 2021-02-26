@@ -1,0 +1,14 @@
+# Request
+mutation softDeleteKabko($id: Int!) {
+  softDeleteKabko(id: $id)
+}
+
+# Variables
+{
+  "id": 917
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

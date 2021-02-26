@@ -1,0 +1,70 @@
+# Request
+mutation createKabko($payload: KabkoPayload!){
+  createKabko(payload: $payload) {
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    idProvinsi,
+    provinsi{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeProvinsi,
+      namaProvinsi,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    },
+    kodeKabko,
+    namaKabko,
+    kodeKabkoKemendagri,
+    statusAktif,
+    statusAktifData {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    },
+    statusTpu,
+    statusTpuData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "payload": {
+    "kodeKabko": "BASDA",
+    "namaKabko": "TesLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m",
+    "idProvinsi": 1,
+    "statusAktif": 5
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

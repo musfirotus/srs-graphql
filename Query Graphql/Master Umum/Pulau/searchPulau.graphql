@@ -1,0 +1,44 @@
+# Request
+query searchPulauByName($payload: PulauArgs!, $orderBy: PulauFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int){
+  searchPulauByName(payload: $payload, orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip){
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodePulau,
+      namaPulau,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodePulau",
+  "sort": "DESC",
+  "limit": 0,
+  "skip": 0,
+  "payload": {
+    "namaPulau": "tes"
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

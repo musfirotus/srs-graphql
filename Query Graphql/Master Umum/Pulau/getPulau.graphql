@@ -1,0 +1,33 @@
+# Request
+query getPulauById($id: Int!){
+  getPulauById(id: $id){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodePulau,
+    namaPulau,
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 174
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

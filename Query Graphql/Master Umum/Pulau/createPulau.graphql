@@ -1,0 +1,37 @@
+# Request
+mutation createPulau($payload: PulauPayload!){
+  createPulau(payload: $payload){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodePulau,
+    namaPulau,
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "payload": {
+    "kodePulau": "af",
+    "namaPulau": "Tes",
+    "statusAktif": 1
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

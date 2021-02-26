@@ -1,0 +1,38 @@
+# Request
+mutation updatePulau($id: Int!, $payload: PulauPayload!){
+  updatePulau(payload: $payload, id: $id){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodePulau,
+    namaPulau,
+    statusAktif,
+    statusAktifData{
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    }
+  }
+}
+
+# Variables
+{
+  "id": 169,
+  "payload": {
+    "kodePulau": "Ax",
+    "namaPulau": "Tes ni",
+    "statusAktif": 3
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

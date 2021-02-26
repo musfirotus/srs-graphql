@@ -1,0 +1,41 @@
+# Request
+query getAllPulau($orderBy: PulauFieldsEnum, $sort: SortByEnum, $limit: Int, $skip: Int){
+  getAllPulau(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip){
+    currentPage,
+    totalPages,
+    totalItems,
+    data {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodePulau,
+      namaPulau,
+      statusAktif,
+      statusAktifData{
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      }
+    }
+  }
+}
+
+# Variables
+{
+  "orderBy": "kodePulau",
+  "sort": "ASC",
+  "limit": 0,
+  "skip": 0
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

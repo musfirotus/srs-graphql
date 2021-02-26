@@ -1,0 +1,14 @@
+# Request
+mutation softDeletePulau($id: Int!){
+  softDeletePulau(id: $id)
+}
+
+# Variables
+{
+  "id": 174
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

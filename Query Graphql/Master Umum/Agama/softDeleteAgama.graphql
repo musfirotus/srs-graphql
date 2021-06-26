@@ -1,11 +1,6 @@
 # Request
-mutation softDeleteAgama($id: Int!){
-  softDeleteAgama(id: $id)
-}
-
-# Variables
-{
-  "id": 79
+mutation{
+  softDeleteAgama(id: 79)
 }
 
 # Headers

@@ -1,7 +1,15 @@
 # Request
-# Request
-query searchAgama($orderBy: AgamaFieldsEnum, $sort: SortByEnum, $limit: Int!, $skip: Int!, $payload: AgamaArgs!) {
-  searchAgama(orderBy: $orderBy, sort: $sort, limit: $limit, skip: $skip, payload: $payload) {
+query{
+  searchAgama(
+    deletedOnly: false
+    orderBy: kodeAgama
+    sort: ASC
+    limit: 0
+    skip: 0
+    payload: {
+      namaAgama: "tes"
+    }
+  ) {
     currentPage,
     totalPages,
     totalItems,
@@ -16,17 +24,6 @@ query searchAgama($orderBy: AgamaFieldsEnum, $sort: SortByEnum, $limit: Int!, $s
       kodeAgama,
       statusAktif
     }
-  }
-}
-
-# Variables
-{
-  "orderBy": "kodeAgama",
-  "sort": "ASC",
-  "limit": 0,
-  "skip": 0,
-  "payload": {
-    "namaAgama": "tes"
   }
 }
 

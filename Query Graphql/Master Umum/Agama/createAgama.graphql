@@ -1,6 +1,10 @@
 # Request
-mutation createAgama($agama: AgamaPayload!) {
-  createAgama(payload: $agama){
+mutation{
+  createAgama(payload: {
+  	namaAgama: "Tes tes",
+    kodeAgama: "a",
+    statusAktif: 1
+  }){
     id,
     createdBy,
     updatedBy,
@@ -10,15 +14,6 @@ mutation createAgama($agama: AgamaPayload!) {
     namaAgama,
     kodeAgama,
     statusAktif
-  }
-}
-
-# Variables
-{
-  "agama": {
-    "namaAgama": "Tes tes",
-    "kodeAgama": "a",
-    "statusAktif": 1
   }
 }
 

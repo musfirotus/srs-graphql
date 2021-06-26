@@ -1,6 +1,6 @@
 # Request
-query getAgama($id: Int!) {
-  getAgama(id: $id) {
+query{
+  getAgama(id: 54) {
     id,
     createdBy,
     updatedBy,
@@ -11,11 +11,6 @@ query getAgama($id: Int!) {
     kodeAgama,
     statusAktif
   }
-}
-
-# Variables
-{
-  "id": 54
 }
 
 # Headers

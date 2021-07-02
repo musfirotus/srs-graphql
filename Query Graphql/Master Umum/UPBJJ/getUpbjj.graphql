@@ -1,0 +1,78 @@
+# Request
+query getUpbjj($id: Int!){
+  getUpbjj(id: $id){
+    id,
+    createdBy,
+    updatedBy,
+    createdAt,
+    updatedAt,
+    deletedAt,
+    kodeUpbjj,
+    namaUpbjj,
+    alamatUpbjj,
+    nomorTeleponUpbjj,
+    nomorFaxUpbjj,
+    emailUpbjj,
+    webUpbjj,
+    statusAktif,
+    statusAktifData {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      keterangan
+    },
+    idZonaWaktu,
+    zonaWaktu {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      namaZonaWaktu,
+      statusAktif,
+      statusAktifData {
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      },
+    },
+    idUpbjjSentra,
+    upbjjSentra {
+      id,
+      createdBy,
+      updatedBy,
+      createdAt,
+      updatedAt,
+      deletedAt,
+      kodeUpbjj,
+      statusAktif,
+      statusAktifData {
+        id,
+        createdBy,
+        updatedBy,
+        createdAt,
+        updatedAt,
+        deletedAt,
+        keterangan
+      },
+    }
+  }
+}
+
+# Variables
+{
+  "id": 0
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

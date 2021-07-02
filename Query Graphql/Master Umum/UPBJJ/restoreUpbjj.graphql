@@ -1,0 +1,9 @@
+# Request
+mutation{
+  restoreUpbjj(id:1)
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

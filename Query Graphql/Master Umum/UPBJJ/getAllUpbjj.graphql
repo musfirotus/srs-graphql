@@ -1,0 +1,40 @@
+# Request
+query{
+  getAllUpbjj(
+    deletedOnly: true
+    orderBy: namaUpbjj
+    sort: ASC
+    limit: 10
+    skip: 0
+  ){
+    currentPage
+    totalPages
+    totalItems
+    data{
+      idZonaWaktu
+      kodeUpbjj
+      idUpbjjSentra
+      namaUpbjj
+      alamatUpbjj
+      nomorTeleponUpbjj
+      nomorFaxUpbjj
+      emailUpbjj
+      webUpbjj
+      statusAktif
+      statusAktifData{
+        id
+        createdBy
+        updatedBy
+        createdAt
+        updatedAt
+        deletedAt
+        keterangan
+      }
+    }
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

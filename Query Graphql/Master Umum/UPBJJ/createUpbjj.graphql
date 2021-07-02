@@ -1,0 +1,45 @@
+mutation{
+  createUpbjj(payload: {
+  	kodeUpbjj: ""
+    idUpbjjSentra: 1
+    idZonaWaktu: 1
+    namaUpbjj: "m"
+    alamatUpbjj: "m"
+    nomorTeleponUpbjj: "082213467964"
+    nomorFaxUpbjj: "0123456789"
+    emailUpbjj: "m@gmail.com"
+    webUpbjj: "a.com"
+    statusAktif: 1
+  }){
+    id
+    createdBy
+    updatedBy
+    createdAt
+    updatedAt
+    deletedAt
+    idZonaWaktu
+    kodeUpbjj
+    idUpbjjSentra
+    namaUpbjj
+    alamatUpbjj
+    nomorTeleponUpbjj
+    nomorFaxUpbjj
+    emailUpbjj
+    webUpbjj
+    statusAktif
+    statusAktifData{
+      id
+      createdBy
+      updatedBy
+      createdAt
+      updatedAt
+      deletedAt
+      keterangan
+    }
+  }
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

@@ -1,0 +1,9 @@
+# Request
+mutation{
+  softDeleteUpbjj(id: 79)
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}

@@ -1,0 +1,9 @@
+# Request
+mutation{
+  restoreDeletedAgama(id:1)
+}
+
+# Headers
+{
+  "Authorization": "Bearer "
+}
